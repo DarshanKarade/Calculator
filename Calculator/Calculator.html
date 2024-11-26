@@ -1,0 +1,150 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="Calculator.js"></script>
+
+    <style>
+       body
+       {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: auto;
+        background-color: #2f3e46;
+       }
+
+       .cal
+       {
+        width: auto;
+        background-color: #001427;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+       }
+
+       #result
+       {
+        width: 100%;
+        height: 50px;
+        text-align: right;
+        font-size: 24px;
+        padding: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #457b9d;
+        border-radius: 10px;
+        background-color: #457b9d;
+        color: whitesmoke; 
+        position: relative;
+        bottom: 25px;
+       }
+
+       table
+       {
+        width: 100%;
+       }
+
+       td
+       {
+        padding: 10px;
+       }
+
+       .button
+       {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        cursor: pointer;
+        border-radius: 10px;
+        border: none;
+        background-color: #415a77;
+       }
+
+       .equal
+       {
+        width: 100%;
+        height: 60px;
+        font-size: 24px;
+        cursor: pointer;
+        border-radius: 10px;
+        border: none;
+        background-color: #415a77;
+       }
+
+       .button:hover, .equal:hover
+       {
+        background-color: #dedbd2;
+       }
+
+       .button:active, .equal:active
+       {
+        background-color: lightseagreen;
+       }
+
+       .logo
+       {
+        color: whitesmoke;
+        text-align: right;
+        position: relative;
+        bottom: 35px;
+        left: 20px;
+        font-size: 15px;
+       }
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="cal">
+        <p class="logo">Darsh</p>
+        <input type="text" id="result" disabled></td>
+    
+
+        <table id="calculator">
+       
+            <tr>
+                <td><button class="button" onclick="display('(')">(</button></td>
+                <td><button class="button" onclick="display(')')">)</button></td>
+                <td><button class="button" onclick="backspace()"><i class="fas fa-backspace"></i></button></td>
+                <td><button class="button" onclick="clearDisplay()">C </button></td>
+            </tr>
+            
+            <tr>
+                <td><button class="button" onclick="display('7')">7</button></td>
+                <td><button class="button" onclick="display('8')">8</button></td>
+                <td><button class="button" onclick="display('9')">9</button></td>
+                <td><button class="button" onclick="display('*')">*</button></td>
+            </tr>
+            
+            <tr>
+                <td><button class="button" onclick="display('4')">4</button></td>
+                <td><button class="button" onclick="display('5')">5</button></td>
+                <td><button class="button" onclick="display('6')">6</button></td>
+                <td><button class="button" onclick="display('-')">-</button></td>
+            </tr>
+            
+            <tr>
+                <td><button class="button" onclick="display('1')">1</button></td>
+                <td><button class="button" onclick="display('2')">2</button></td>
+                <td><button class="button" onclick="display('3')">3</button></td>
+                <td><button class="button" onclick="display('+')">+</button></td>
+            </tr>
+            
+            <tr>
+                <td><button class="button" onclick="display('0')">0</button></td>
+                <td><button class="button" onclick="display('.')">.</button></td>
+                <td><button class="button" onclick="display('/')">/</button></td>
+                <td><button class="equal" onclick="cal()">=</button></td>
+            </tr>
+            
+        </table>
+    </div>
+</body>
+</html>
